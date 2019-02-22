@@ -1,0 +1,10 @@
+function variable(p) {
+  //localstrage
+  if (p === "ls") {
+    return "localStorageのkeyを設定";
+  }
+  //gas-spreadsheet’s url
+  else if (p === "gasurl") {
+    return "https://script.google.com/macros/s/～～～";
+  }
+}
