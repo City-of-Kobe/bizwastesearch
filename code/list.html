@@ -1,0 +1,186 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<!-- Google Tag Manager -->
+	<script>(function (w, d, s, l, i) { w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f); })(window, document, 'script', 'dataLayer', 'GTM-WW3MCZ8');</script>
+	<!-- End Google Tag Manager -->
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="IE=edge">
+	<meta name="description" content="神戸市内の事業系ごみ（お店や会社から出すごみ）の分別区分を、リスト（一覧）から調べることができます。" />
+	<link rel="shortcut icon" href="img/img-favicon.ico" />
+	<link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-precomposed.png" />
+	<title>神戸市：リストでさがす（事業系ごみ分別検索サイト）</title>
+	<script src="lib/jquery.min.js"></script>
+	<script src="lib/bootstrap.min.js"></script>
+	<script src="script/setting.js"></script>
+	<script src="script/script.js"></script>
+	<script src="lib/intro.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="lib/introjs.min.css">
+	<link rel="stylesheet" type="text/css" href="lib/cb-materialbtn.min.css">
+</head>
+
+<body>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WW3MCZ8" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="navbar-header">
+			<a href="javascript:void(0)" onclick="turnPage('index.html','event','list_totop')" class="navbar-brand" title="神戸市：事業系ごみ分別検索サイト"></a>
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="sr-only">メニュー</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		</div>
+		<div id="gnavi" class="collapse navbar-collapse">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="javascript:void(0)" onclick="turnPage('index.html','event','list_menu_top')">トップ</a></li>
+				<li><a href="javascript:void(0)" onclick="turnPage('search.html','event','list_menu_search')">キーワードでさがす</a></li>
+				<li><a href="javascript:void(0)" onclick="turnPage('list.html','event','list_menu_list')">リストでさがす</a></li>
+				<li><a href="javascript:void(0)" onclick="turnPage('gyoshubetsu.html','event','list_menu_gyoshubetsu')">業種でさがす</a></li>
+				<li><a href="javascript:void(0)" onclick="turnPage('http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/index.html','event','list_menu_gyoshubetsu')">一般廃棄物メニューページへ</a></li>
+			</ul>
+		</div>
+	</nav>
+	<div id="modeselect_area_list">
+		<button class="btn btn-white_rsd" id="modeselect_Btn" role="button">
+			<span class="glyphicon glyphicon-info-sign modeselect_Btn_text"></span>
+			<span class="modeselect_Btn_text">つかいかた</span>
+		</button>
+	</div>
+	<div id="loader-bg">
+		<div id="loader">
+			<img src="img/img-loading.gif" width="300px" height="300px" alt="Now Loading..." />
+			<p>Now Loading...</p>
+		</div>
+	</div>
+	<div id="list-header" data-intro="一覧は50音順です" data-step="1">
+		<div class="h4 list-point"><b>Index</b></div>
+		<div class="h4 list-index">
+			<b>
+				<a href="#list-gyoTitle-A" onclick="actionLog('event','list_index_A')" data-intro="探している品目の行を選択すると.." data-step="2">あ</a>｜
+				<a href="#list-gyoTitle-K" onclick="actionLog('event','list_index_K')">か</a>｜
+				<a href="#list-gyoTitle-S" onclick="actionLog('event','list_index_S')">さ</a>｜
+				<a href="#list-gyoTitle-T" onclick="actionLog('event','list_index_T')">た</a>｜
+				<a href="#list-gyoTitle-N" onclick="actionLog('event','list_index_N')">な</a>｜
+				<a href="#list-gyoTitle-H" onclick="actionLog('event','list_index_H')">は</a>｜
+				<a href="#list-gyoTitle-M" onclick="actionLog('event','list_index_M')">ま</a>｜
+				<a href="#list-gyoTitle-Y" onclick="actionLog('event','list_index_Y')">や</a>｜
+				<a href="#list-gyoTitle-R" onclick="actionLog('event','list_index_R')">ら</a>｜
+				<a href="#list-gyoTitle-W" onclick="actionLog('event','list_index_W')">わ</a>
+			</b>
+		</div>
+	</div>
+	<div id="list-area">
+		<div class="h4 list-point " id="list-gyoTitle-A"  data-intro="画面が自動的に移動して便利です" data-step="3"><b>あ</b></div>
+		<ul class="list" id="list-contents-A"></ul>
+		<div class="h4 list-point " id="list-gyoTitle-K"><b>か</b></div>
+		<ul class="list" id="list-contents-K"></ul>
+		<div class="h4 list-point " id="list-gyoTitle-S"><b>さ</b></div>
+		<ul class="list" id="list-contents-S"></ul>
+		<div class="h4 list-point " id="list-gyoTitle-T"><b>た</b></div>
+		<ul class="list" id="list-contents-T"></ul>
+		<div class="h4 list-point " id="list-gyoTitle-N"><b>な</b></div>
+		<ul class="list" id="list-contents-N"></ul>
+		<div class="h4 list-point " id="list-gyoTitle-H"><b>は</b></div>
+		<ul class="list" id="list-contents-H"></ul>
+		<div class="h4 list-point " id="list-gyoTitle-M"><b>ま</b></div>
+		<ul class="list" id="list-contents-M"></ul>
+		<div class="h4 list-point " id="list-gyoTitle-Y"><b>や</b></div>
+		<ul class="list" id="list-contents-Y"></ul>
+		<div class="h4 list-point " id="list-gyoTitle-R"><b>ら</b></div>
+		<ul class="list" id="list-contents-R"></ul>
+		<div class="h4 list-point " id="list-gyoTitle-W"><b>わ</b></div>
+		<ul class="list" id="list-contents-W"></ul>
+	</div>
+	<div id="inquirie-area">
+		<a href="javascript:void(0)" onclick="modal_inquirie()">
+			<span>お探しのものがみつからない場合</span>
+		</a>
+	</div>
+	<div id="share">
+		<a href="javascript:void(0)" onclick="modal_share()">
+			<span><span class="glyphicon glyphicon-share"></span>&nbsp;このページを共有する</a></span>
+		</a>
+	</div>
+	<div class="panel panel-success" id="top-info">
+		<div class="panel-heading">
+			<div id="top-info-text">このサイトでは、神戸市の事業系ごみ（事業系一般廃棄物）の分別区分をご案内しています。<br />家庭ごみの分別区分をお調べになりたい方は、<a href="javascript:void(0)"
+				 onclick="turnPage('http://www.city.kobe.lg.jp/life/recycle/index.html','event','list_household')"><b>こちら</b></a>をご覧ください。</div>
+		</div>
+	</div>
+	<div class="space"></div>
+	<!-- Modal -->
+	<div class="modal fade" id="modal-inquirie" tabindex="-1">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title">お問い合わせ方法</h4>
+				</div>
+				<div class="modal-body">
+					<div>
+						<span class="glyphicon glyphicon-envelope"></span>
+						<span><b>メールで問い合わせる</b></span>
+					</div>
+					<div class="inquiry" id="inquiry_mail"><button type="button" class="btn btn-green600_rsd" data-dismiss="modal" id="modal-exclamation-but">メールを作成</button></div>
+					<div>※メールの件名は変更しないでください</div>
+					<div class="space"></div>
+					<div>
+						<span class="glyphicon glyphicon-earphone"></span>
+						<span><b>電話で問い合わせる</b></span>
+					</div>
+					<div>環境局事業系廃棄物対策部（078-322-6432）までお問い合わせください</div>
+					<div>[受付時間] 平日8:45〜17:30</div>
+					<div class="inquiry" id="inquiry_tel"><button type="button" class="btn btn-green600_rsd" data-dismiss="modal" id="modal-exclamation-but">電話をかける</button></div>
+				</div>
+				<div class="modal-footer">
+					<button class="btn btn-white_rsd" data-dismiss="modal" id="modbut_close" role="button">
+						<span class="modbut_close_text">閉じる</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<p id="pageTop">
+		<a href="#" onclick="actionLog('event','list_upside')"><i class="glyphicon glyphicon-menu-up totop"></i></a>
+	</p>
+	<!-- Share Modal -->
+	<div class="modal fade" id="modal-share" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title">共有方法を選択してください</h4>
+				</div>
+				<div class="modal-body">
+					<div class="share_modal_icon">
+						<span id="share_ml"></span>
+						<span id="share_tw"></span>
+						<span id="share_fb"></span>
+						<span id="share_ln"></span>
+					</div>
+					<div class="share_modal_url_title">【このページのURL】</div>
+					<div class="share_modal_url"></div>
+				</div>
+				<div class="modal-footer">
+					<button class="btn btn-white_rsd" data-dismiss="modal" id="modbut_close" role="button">
+						<span class="modbut_close_text">閉じる</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

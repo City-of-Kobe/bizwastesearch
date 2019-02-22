@@ -1,0 +1,169 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WW3MCZ8');</script>
+		<!-- End Google Tag Manager -->
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+		<meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="IE=edge" >
+		<meta name="description" content="神戸市内の事業系ごみ（お店や会社から出すごみ）の分別区分を簡単に調べることができます。収録品目は１２００品目以上。キーワードから、リストから、業種から、あなたにあった方法で探せます。"/>
+        <link rel="shortcut icon" href="img/img-favicon.ico" />
+		<link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-precomposed.png" />
+		<title>神戸市：事業系ごみ分別検索サイト</title>
+		<script src="lib/jquery.min.js"></script> 
+		<script src="lib/bootstrap.min.js"></script>
+		<script src="lib/bootstrap-add-clear.min.js"></script>
+		<script src="script/setting.js"></script>
+		<script src="script/script.js"></script>
+		<link rel="stylesheet" type="text/css" href="lib/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="lib/cb-materialbtn.min.css">
+	</head>
+	<body>
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WW3MCZ8" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="navbar-header">
+				<a href="javascript:void(0)" onclick="turnPage('index.html','event','list_totop')" class="navbar-brand" title="神戸市：事業系ごみ分別検索サイト"></a>
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">メニュー</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<div id="gnavi" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="javascript:void(0)" onclick="turnPage('index.html','event','list_menu_top')">トップ</a></li>
+					<li><a href="javascript:void(0)" onclick="turnPage('search.html','event','list_menu_search')">キーワードでさがす</a></li>
+					<li><a href="javascript:void(0)" onclick="turnPage('list.html','event','list_menu_list')">リストでさがす</a></li>
+					<li><a href="javascript:void(0)" onclick="turnPage('gyoshubetsu.html','event','list_menu_gyoshubetsu')">業種でさがす</a></li>
+					<li><a href="javascript:void(0)" onclick="turnPage('http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/index.html','event','list_menu_gyoshubetsu')">一般廃棄物メニューページへ</a></li>
+				</ul>
+			</div>
+		</nav>
+		<div id="loader-bg">
+			<div id="loader">
+				<img src="img/img-loading.gif" width="300px" height="300px" alt="Now Loading..." />
+				<p>Now Loading...</p>
+			</div>
+		</div>
+		<!-- 結果欄 -->
+		<div class="space"></div>
+		<div class="panel" id="result">
+			<div class="panel-heading">
+				<div id="result-text">
+					<div class="h4" id="result-area">
+						<span id="result-name"></span>
+						<span class="h5">は、</span>
+					</div>
+					<div id="result-genre">
+						<!-- 種別挿入箇所 -->
+						<span class="h5">です。</span>
+					</div>
+				</div>
+			</div>
+			<div class="list-group" id="info-list">
+			</div>
+		</div>
+		<div id="share">
+			<a  href="javascript:void(0)"onclick="modal_share()">
+				<span><span class="glyphicon glyphicon-share"></span>&nbsp;このページを共有する</a></span>
+			</a>
+		</div>
+		<div id="before-but"></div>
+		<div class="space" id="after-but"></div>
+		<div class="panel panel-success" id="top-info">
+			<div class="panel-heading">
+				<div id="top-info-text">このサイトでは、神戸市の事業系ごみ（事業系一般廃棄物）の分別区分をご案内しています。<br />家庭ごみの分別区分をお調べになりたい方は、<a href="javascript:void(0)" onclick="turnPage('http://www.city.kobe.lg.jp/life/recycle/index.html','event','information_household')"><b>こちら</b></a>をご覧ください。</div>
+			</div>
+		</div>
+		<div class="space"></div>
+		<!-- プラ等搬入理由 -->		
+		<div class="modal fade" id="modal-exception" tabindex="-1">
+		    <div class="modal-dialog modal-lg">
+		        <div class="modal-content">
+		            <div class="modal-header">
+		                <button type="button" class="close" data-dismiss="modal">
+		                    <span aria-hidden="true">&times;</span>
+		                </button>
+		                <h4 class="modal-title"><b>排出量を制限する理由</b></h4>
+		            </div>
+		            <div class="modal-body">
+						<div>指定された品目は、本来「産業廃棄物」として処分するものですが、神戸市では、一部の産業廃棄物（廃プラスチック類、ゴムくず、金属くず、ガラスくず及び陶磁器くず）については、排出量が少量（一般家庭の排出量と同程度）の場合に限り、例外的に「事業系一般廃棄物」として受け入れています。<br />これは、個人商店などの小規模事業者が、ごく少量の産業廃棄物（たとえばペン１本）を廃棄するにあたり、マニュフェスト作成等の煩雑な手続きが生じてしまうことに配慮したものです。</div>
+					</div>
+	 		        <div class="modal-footer">
+		                <button class="btn btn-white_rsd" data-dismiss="modal" id="modbut_close" role="button">
+							<span class="modbut_close_text">閉じる</span>
+						</button>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+		<!-- Share Modal -->
+		<div class="modal fade" id="modal-share" tabindex="-1">
+		    <div class="modal-dialog">
+		        <div class="modal-content">
+		            <div class="modal-header">
+		                <button type="button" class="close" data-dismiss="modal">
+		                    <span aria-hidden="true">&times;</span>
+		                </button>
+		                <h4 class="modal-title">共有方法を選択してください</h4>
+		            </div>
+		            <div class="modal-body">
+						<div class="share_modal_icon">
+							<span id="share_ml"></span>
+							<span id="share_tw"></span>
+							<span id="share_fb"></span>
+							<span id="share_ln"></span>
+						</div>
+						<div class="share_modal_url_title">【このページのURL】</div>
+						<div class="share_modal_url"></div>
+					</div>
+	 		        <div class="modal-footer">
+		                <button class="btn btn-white_rsd" data-dismiss="modal" id="modbut_close" role="button">
+							<span class="modbut_close_text">閉じる</span>
+						</button>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+		<!-- Modal -->
+		<div class="modal fade" id="modal-inquirie" tabindex="-1">
+		    <div class="modal-dialog modal-lg">
+		        <div class="modal-content">
+		            <div class="modal-header">
+		                <button type="button" class="close" data-dismiss="modal">
+		                    <span aria-hidden="true">&times;</span>
+		                </button>
+		                <h4 class="modal-title">お問い合わせ方法</h4>
+		            </div>
+		            <div class="modal-body">
+						<div>
+							<span class="glyphicon glyphicon-envelope"></span>
+							<span><b>メールで問い合わせる</b></span>
+						</div>
+						<div class="inquiry" id="inquiry_mail"><button type="button" class="btn btn-green600_rsd" data-dismiss="modal" id="modal-exclamation-but">メールを作成</button></div>
+						<div>※メールの件名は変更しないでください</div>
+						<div class="space"></div>
+						<div>
+							<span class="glyphicon glyphicon-earphone"></span>
+							<span><b>電話で問い合わせる</b></span>
+						</div>
+						<div>環境局事業系廃棄物対策部（078-322-6432）までお問い合わせください</div>
+						<div>[受付時間] 平日8:45〜17:30</div>
+						<div class="inquiry" id="inquiry_tel"><button type="button" class="btn btn-green600_rsd" data-dismiss="modal" id="modal-exclamation-but">電話をかける</button></div>
+					</div>
+	 		        <div class="modal-footer">
+		                <button class="btn btn-white_rsd" data-dismiss="modal" id="modbut_close" role="button">
+							<span class="modbut_close_text">閉じる</span>
+						</button>
+		            </div>
+		        </div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/index.html</loc>
+  <priority>1.0</priority>
+ </url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/bizwaste-rule.csv</loc>
+  <priority>0.8</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/search.html</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/result.html</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/list.html</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/select.html</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/gyoshubetsu.html</loc>
+  <priority>0.3</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/gyoshubetsu-select.html</loc>
+  <priority>0.3</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=1021&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=1031&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=1050&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=1061&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=1062&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=1106&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=1164&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=1167&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/select.html?no=1167</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=1167&amp;suffix=2</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=1174&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=1176&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=1183&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=1237&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=1238&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=1240&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=1253&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=1285&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=1290&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=1336&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=1368&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=1384&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=1388&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=1400&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=1422&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=1430&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/select.html?no=1430</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=1430&amp;suffix=2</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=1441&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=1448&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=1463&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=1464&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=1465&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=1466&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=1467&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=1468&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=1469&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=1470&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=1471&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=1472&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=1473&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=1475&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=2001&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=2100&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=2101&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=2102&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=2103&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=2104&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=2105&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=2108&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=2109&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=3003&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=3018&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=3029&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=3044&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=3069&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=3094&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=4052&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=4067&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=4070&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=5018&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/select.html?no=5018</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=5018&amp;suffix=2</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=5026&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/select.html?no=5026</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=5026&amp;suffix=2</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=7002&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=7003&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=7012&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/bizwastesearch/information.html?no=7014&amp;suffix=1</loc>
+  <priority>0.5</priority>
+</url>
+</urlset>

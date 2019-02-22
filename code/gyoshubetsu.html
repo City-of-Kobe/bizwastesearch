@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WW3MCZ8');</script>
+		<!-- End Google Tag Manager -->
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+		<meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="IE=edge" >
+		<meta name="description" content="神戸市内の事業系ごみ（お店や会社から出すごみ）の分別区分を、「オフィス」「飲食店」といった職業ごとにまとめました。職場のみなさんでご覧ください。"/>
+        <link rel="shortcut icon" href="img/img-favicon.ico" />
+		<link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-precomposed.png" />
+		<title>神戸市：業種でさがす（事業系ごみ分別検索サイト）</title>
+		<script src="lib/jquery.min.js"></script> 
+		<script src="lib/bootstrap.min.js"></script>
+		<script src="lib/smooth-scroll.min.js"></script>
+		<script src="script/setting.js"></script>
+		<script src="script/script.js"></script>
+		<script src="lib/intro.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="lib/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="lib/cb-materialbtn.min.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WW3MCZ8" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="navbar-header">
+				<a href="javascript:void(0)" onclick="turnPage('index.html','event','list_totop')" class="navbar-brand" title="神戸市：事業系ごみ分別検索サイト"></a>
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">メニュー</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<div id="gnavi" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="javascript:void(0)" onclick="turnPage('index.html','event','list_menu_top')">トップ</a></li>
+					<li><a href="javascript:void(0)" onclick="turnPage('search.html','event','list_menu_search')">キーワードでさがす</a></li>
+					<li><a href="javascript:void(0)" onclick="turnPage('list.html','event','list_menu_list')">リストでさがす</a></li>
+					<li><a href="javascript:void(0)" onclick="turnPage('gyoshubetsu.html','event','list_menu_gyoshubetsu')">業種でさがす</a></li>
+					<li><a href="javascript:void(0)" onclick="turnPage('http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/index.html','event','list_menu_gyoshubetsu')">一般廃棄物メニューページへ</a></li>
+				</ul>
+			</div>
+		</nav>
+		<div id="list-header-gyoshubetsu" data-intro="職業一覧" data-step="1">
+			<div class="h4 list-point"><b>業種を選んでください</b></div>
+		</div>
+		<div id="gyoshubetsu_area">
+			<button class="btn btn-white_rsd gyoshubetsu_btn" role="button" id="gyo-1">
+				<span class="gyoshubetsu_btn_text">オフィス</span>
+				<span><img src="img/img-gyoshu-01.png" alt="業種を選択（オフィス）" class="gyoshubetsu_icon"/></span>
+			</button>
+			<button class="btn btn-white_rsd gyoshubetsu_btn" role="button" id="gyo-2">
+				<span class="gyoshubetsu_btn_text">飲食業</span>
+				<span><img src="img/img-gyoshu-02.png" alt="業種を選択（飲食業）" class="gyoshubetsu_icon"/></span>
+			</button>
+			<button class="btn btn-white_rsd gyoshubetsu_btn" role="button" id="gyo-3">
+				<span class="gyoshubetsu_btn_text">医療機関・薬局・製薬業</span>
+				<span><img src="img/img-gyoshu-03.png" alt="業種を選択（医療機関・薬局・製薬業）" class="gyoshubetsu_icon"/></span>
+			</button>
+			<button class="btn btn-white_rsd gyoshubetsu_btn" role="button" id="gyo-4">
+				<span class="gyoshubetsu_btn_text">福祉事業・教育機関</span>
+				<span><img src="img/img-gyoshu-04.png" alt="業種を選択（福祉事業・教育機関）" class="gyoshubetsu_icon"/></span>
+			</button>
+			<button class="btn btn-white_rsd gyoshubetsu_btn" role="button" id="gyo-5">
+				<span class="gyoshubetsu_btn_text">理容店・美容室</span>
+				<span><img src="img/img-gyoshu-05.png" alt="業種を選択（理容店・美容室）" class="gyoshubetsu_icon"/></span>
+			</button>
+			<button class="btn btn-white_rsd gyoshubetsu_btn" role="button" id="gyo-6">
+				<span class="gyoshubetsu_btn_text">販売業・運送業</span>
+				<span><img src="img/img-gyoshu-06.png" alt="業種を選択（販売業・運送業）" class="gyoshubetsu_icon"/></span>
+			</button>
+			<button class="btn btn-white_rsd gyoshubetsu_btn" role="button" id="gyo-7">
+				<span class="gyoshubetsu_btn_text">建設業・製造業</span>
+				<span><img src="img/img-gyoshu-07.png" alt="業種を選択（建設業・製造業）" class="gyoshubetsu_icon"/></span>
+			</button>
+			<button class="btn btn-white_rsd gyoshubetsu_btn" role="button" id="gyo-8">
+				<span class="gyoshubetsu_btn_text">自動車・バイク関連業</span>
+				<span><img src="img/img-gyoshu-08.png" alt="業種を選択（自動車・バイク関連業）" class="gyoshubetsu_icon icon-mini"/></span>
+			</button>
+			<button class="btn btn-white_rsd gyoshubetsu_btn" role="button" id="gyo-9">
+				<span class="gyoshubetsu_btn_text">農林・園芸業</span>
+				<span><img src="img/img-gyoshu-09.png" alt="業種を選択（農林・園芸業）" class="gyoshubetsu_icon"/></span>
+			</button>
+		</div>
+		<div id="gyoshubetsu_futter">
+			<a href="javascript:void(0)"onclick="modal_inquirie()">
+				<span class="glyphicon glyphicon-info-sign"></span>
+				<span>このページに掲載している情報について</span>
+			</a>
+		</div>
+		<div id="share">
+			<a  href="javascript:void(0)"onclick="modal_share()">
+				<span><span class="glyphicon glyphicon-share"></span>&nbsp;このページを共有する</a></span>
+			</a>
+		</div>
+		<!-- Modal -->
+		<div class="modal fade" id="modal-inquirie" tabindex="-1">
+		    <div class="modal-dialog">
+		        <div class="modal-content">
+		            <div class="modal-header">
+		                <button type="button" class="close" data-dismiss="modal">
+		                    <span aria-hidden="true">&times;</span>
+		                </button>
+		                <h5 class="modal-title">このページに掲載している情報について</h4>
+		            </div>
+		            <div class="modal-body">
+						<div class="h5">このページは、神戸市が平成29年7～8月に市内事業者に向けて実施した「よく出るごみについてのアンケート」への回答を基に作成しています。</div>
+					</div>
+	 		        <div class="modal-footer">
+		                <button class="btn btn-white_rsd" data-dismiss="modal" id="modbut_close" role="button">
+							<span class="modbut_close_text">閉じる</span>
+						</button>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+		<div class="panel panel-success" id="top-info">
+			<div class="panel-heading">
+				<div id="top-info-text">このサイトでは、神戸市の事業系ごみ（事業系一般廃棄物）の分別区分をご案内しています。<br />家庭ごみの分別区分をお調べになりたい方は、<a href="javascript:void(0)" onclick="turnPage('http://www.city.kobe.lg.jp/life/recycle/index.html','event','list_household')"><b>こちら</b></a>をご覧ください。</div>
+			</div>
+		</div>
+		<!-- Share Modal -->
+		<div class="modal fade" id="modal-share" tabindex="-1">
+		    <div class="modal-dialog">
+		        <div class="modal-content">
+		            <div class="modal-header">
+		                <button type="button" class="close" data-dismiss="modal">
+		                    <span aria-hidden="true">&times;</span>
+		                </button>
+		                <h4 class="modal-title">共有方法を選択してください</h4>
+		            </div>
+		            <div class="modal-body">
+						<div class="share_modal_icon">
+							<span id="share_ml"></span>
+							<span id="share_tw"></span>
+							<span id="share_fb"></span>
+							<span id="share_ln"></span>
+						</div>
+						<div class="share_modal_url_title">【このページのURL】</div>
+						<div class="share_modal_url"></div>
+					</div>
+	 		        <div class="modal-footer">
+		                <button class="btn btn-white_rsd" data-dismiss="modal" id="modbut_close" role="button">
+							<span class="modbut_close_text">閉じる</span>
+						</button>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+		<div class="space"></div>
+	</body>
+</html>

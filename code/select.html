@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WW3MCZ8');</script>
+		<!-- End Google Tag Manager -->
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+		<meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="IE=edge" >
+		<link rel="shortcut icon" href="img/img-favicon.ico" />
+		<link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-precomposed.png" />
+		<title>神戸市：事業系ごみ分別検索サイト</title>
+		<script src="lib/jquery.min.js"></script> 
+		<script src="lib/bootstrap.min.js"></script>
+		<script src="lib/bootstrap-add-clear.min.js"></script>
+		<script src="script/setting.js"></script>
+		<script src="script/script.js"></script>
+		<link rel="stylesheet" type="text/css" href="lib/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="lib/cb-materialbtn.min.css">
+	</head>
+	<body>
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WW3MCZ8" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="navbar-header">
+				<a href="javascript:void(0)" onclick="turnPage('index.html','event','list_totop')" class="navbar-brand"></a>
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">メニュー</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<div id="gnavi" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="javascript:void(0)" onclick="turnPage('index.html','event','list_menu_top')">トップ</a></li>
+					<li><a href="javascript:void(0)" onclick="turnPage('search.html','event','list_menu_search')">キーワードでさがす</a></li>
+					<li><a href="javascript:void(0)" onclick="turnPage('list.html','event','list_menu_list')">リストでさがす</a></li>
+					<li><a href="javascript:void(0)" onclick="turnPage('gyoshubetsu.html','event','list_menu_gyoshubetsu')">業種でさがす</a></li>
+				</ul>
+			</div>
+		</nav>
+		<!-- 		
+		<div id="loader-bg">
+			<div id="loader">
+				<img src="img/img-loading.gif" width="300px" height="300px" alt="Now Loading..." />
+				<p>Now Loading...</p>
+			</div>
+		</div>
+		-->
+		<div class="space"></div>
+		<div class="selectList" id="main" style="margin-top:100px;">
+			<div class="h4 list-point" id="business"></div>
+			<div class="space"></div>
+			<ul class="list" id="list"></ul>
+		</div>
+		<div id="share">
+			<a  href="javascript:void(0)"onclick="modal_share()">
+				<span><span class="glyphicon glyphicon-share"></span>&nbsp;このページを共有する</a></span>
+			</a>
+		</div>
+		<!-- Share Modal -->
+		<div class="modal fade" id="modal-share" tabindex="-1">
+		    <div class="modal-dialog">
+		        <div class="modal-content">
+		            <div class="modal-header">
+		                <button type="button" class="close" data-dismiss="modal">
+		                    <span aria-hidden="true">&times;</span>
+		                </button>
+		                <h4 class="modal-title">共有方法を選択してください</h4>
+		            </div>
+		            <div class="modal-body">
+						<div class="share_modal_icon">
+							<span id="share_ml"></span>
+							<span id="share_tw"></span>
+							<span id="share_fb"></span>
+							<span id="share_ln"></span>
+						</div>
+						<div class="share_modal_url_title">【このページのURL】</div>
+						<div class="share_modal_url"></div>
+					</div>
+	 		        <div class="modal-footer">
+		                <button class="btn btn-white_rsd" data-dismiss="modal" id="modbut_close" role="button">
+							<span class="modbut_close_text">閉じる</span>
+						</button>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+	</body>
+</html>
