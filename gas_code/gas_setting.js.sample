@@ -1,0 +1,13 @@
+function variable(p) {
+  if (p === "spreadsheetId") {
+    return "スプレッドシートのID";
+  } else if (p === "newfolderId") {
+    return "過去ログ保存先フォルダのID";
+  } else if (p === "newlog") {
+    return "https://drive.google.com/open?id=～～～";
+  } else if (p === "kakolog") {
+    return "https://drive.google.com/open?id=～～～";
+  } else if (p === "gaccount") {
+    return "～～～@gmail.com";
+  }
+}
