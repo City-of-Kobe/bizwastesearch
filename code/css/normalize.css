@@ -1,0 +1,184 @@
+/* normalize */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+ 
+body {
+  line-height: 1;
+  color: #000;
+  background: #fff;
+}
+ 
+ol,
+ul {
+  list-style: none;
+}
+ 
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+ 
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+ 
+a img {
+  border: none;
+}
+ 
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+main {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  display: block;
+}
+ 
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+ 
+audio:not([controls]),
+[hidden] {
+  display: none;
+}
+ 
+/* common styles */
+.navi-bar {
+  background: #221f20;
+  font-family: sans-serif;
+  height: 40px;
+  line-height: 40px;
+  overflow: hidden;
+  position: relative;
+}
+ 
+.navi-bar a {
+  text-decoration: none;
+}
+ 
+.navi-bar-back a {
+  color: #eee;
+  left: 0.5em;
+  position: absolute;
+}
+ 
+.navi-bar-back a::before {
+  border-left: 2px solid #eee;
+  border-top: 2px solid #eee;
+  content: '';
+  display: inline-block;
+  height: 0.7em;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  width: 0.7em;
+}
+ 
+.navi-bar-back a:hover {
+  color: #ccc;
+}
+ 
+.navi-bar-title {
+  font-weight: bold;
+  padding: 0 4em;
+  text-align: center;
+}
+ 
+.navi-bar-title a {
+  color: #9b8051;
+}
+ 
+.navi-bar-title a:hover {
+  color: rgba(155,128,81,0.9);
+}
+ 
