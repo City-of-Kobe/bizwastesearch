@@ -530,12 +530,15 @@ $(function() {
       }, 1000);
     });
   }
-  //input clear-button
-  if (url === "search.html") {
+  //input forcus時の処理,clear-button追加
+  if (url === "search.html" || url === "result.html") {
     $("#new_search").addClear({ top: 5, right: 70 });
-    setAutoCompleate();
-  } else if (url === "result.html") {
-    $("#new_search").addClear({ top: 5, right: 70 });
+    // モバイルの場合は検索窓が画面上にくるようにする
+    if (DeviceName() === "1") {
+      $("#new_search").focus(function() {
+        window.location.href = "#new_search";
+      });
+    }
   }
   //業種別ページボタンクリック時の処理
   if (url === "gyoshubetsu.html") {
@@ -572,9 +575,6 @@ $(function() {
       window.location.href = opn_Url;
       return e.preventDefault();
     }
-  });
-  $(':text[name="new_search"]').tooltip({
-    trigger: "focus"
   });
   $("#modeselect_Btn").click(function(e) {
     if (url === "search.html") {
@@ -944,7 +944,7 @@ $(window).on("load", function() {
     if (limit) {
       if (limit === 1) {
         $("#info-list").append(
-          '<li class="list-group-item" href="#"><div class="text-danger h4"><span class="glyphicon glyphicon-exclamation-sign" /> 排出できる量に制限があります</div><div class="h5">排出できるのは、排出元一箇所につき、70Lの袋で3袋分までです。<br />それ以上を処分する場合、もしくは継続的に処分する場合は産業廃棄物として処分してください。<br />※指定袋に入らない場合は、排出元一箇所につき、5点まで排出できます。<br />産業廃棄物に関するお問い合わせは、' +
+          '<li class="list-group-item" href="#"><div class="text-danger h4"><span class="glyphicon glyphicon-exclamation-sign" /> 排出できる量に制限があります</div><div class="h5">排出できるのは、排出元一箇所・1日につき、総量が70Lの袋で3袋分までです。<br />それ以上を処分する場合、もしくは継続的に処分する場合は産業廃棄物として処分してください。<br />※指定袋に入らない場合は、排出元一箇所につき、5点まで排出できます。<br />産業廃棄物に関するお問い合わせは、' +
             sanpaistr +
             '</div><div class="h5"><a href="javascript:void(0)"onclick="modal_exception(' +
             no +
@@ -952,7 +952,7 @@ $(window).on("load", function() {
         );
       } else if (limit === 2) {
         $("#info-list").append(
-          '<li class="list-group-item" href="#"><div class="text-danger h4"><span class="glyphicon glyphicon-exclamation-sign" /> 排出できる量に制限があります</div><div class="h5">排出できるのは、排出元一箇所につき、5点までです。<br />それ以上を処分する場合、もしくは継続的に処分する場合は産業廃棄物として処分してください。<br />※指定袋に入らない場合は、排出元一箇所につき、3袋まで排出できます。<br />産業廃棄物に関するお問い合わせは、' +
+          '<li class="list-group-item" href="#"><div class="text-danger h4"><span class="glyphicon glyphicon-exclamation-sign" /> 排出できる量に制限があります</div><div class="h5">排出できるのは、排出元一箇所・1日につき、総量が5点までです。<br />それ以上を処分する場合、もしくは継続的に処分する場合は産業廃棄物として処分してください。<br />※指定袋に入る場合は、排出元一箇所につき、3袋まで排出できます。<br />産業廃棄物に関するお問い合わせは、' +
             sanpaistr +
             '</div><div class="h5"><a href="javascript:void(0)"onclick="modal_exception(' +
             no +
@@ -2413,8 +2413,16 @@ function setAutoCompleate() {
           ) {
             suggests.push(sortAry[ii].name);
             maxi++;
-            if (maxi > 7) {
-              break;
+            // モバイルの場合は表示候補数を変える
+            if (DeviceName() === "1") {
+              if (maxi > 5) {
+                break;
+              }
+            }
+            else{           
+              if (maxi > 7) {
+                break;
+              }
             }
           }
         }
