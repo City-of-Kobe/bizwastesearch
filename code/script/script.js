@@ -1317,142 +1317,83 @@ $(window).on("load", function() {
         sortAry[ii] = sortAry[ii][1];
       }
       var t_Left;
-      var LinkWod;
+      var LinkWod;      
       for (ii = 0; ii < n; ii++) {
         t_Left = sortAry[ii].keyword.slice(0, 1);
-        if (t_Left === "あ") {
-          LinkWod = "A";
-        } else if (t_Left === "い") {
-          LinkWod = "A";
-        } else if (t_Left === "う") {
-          LinkWod = "A";
-        } else if (t_Left === "え") {
-          LinkWod = "A";
-        } else if (t_Left === "お") {
-          LinkWod = "A";
-        } else if (t_Left === "か") {
-          LinkWod = "K";
-        } else if (t_Left === "き") {
-          LinkWod = "K";
-        } else if (t_Left === "く") {
-          LinkWod = "K";
-        } else if (t_Left === "け") {
-          LinkWod = "K";
-        } else if (t_Left === "こ") {
-          LinkWod = "K";
-        } else if (t_Left === "が") {
-          LinkWod = "K";
-        } else if (t_Left === "ぎ") {
-          LinkWod = "K";
-        } else if (t_Left === "ぐ") {
-          LinkWod = "K";
-        } else if (t_Left === "げ") {
-          LinkWod = "K";
-        } else if (t_Left === "ご") {
-          LinkWod = "K";
-        } else if (t_Left === "さ") {
-          LinkWod = "S";
-        } else if (t_Left === "し") {
-          LinkWod = "S";
-        } else if (t_Left === "す") {
-          LinkWod = "S";
-        } else if (t_Left === "せ") {
-          LinkWod = "S";
-        } else if (t_Left === "そ") {
-          LinkWod = "S";
-        } else if (t_Left === "ざ") {
-          LinkWod = "S";
-        } else if (t_Left === "じ") {
-          LinkWod = "S";
-        } else if (t_Left === "ず") {
-          LinkWod = "S";
-        } else if (t_Left === "ぜ") {
-          LinkWod = "S";
-        } else if (t_Left === "ぞ") {
-          LinkWod = "S";
-        } else if (t_Left === "た") {
-          LinkWod = "T";
-        } else if (t_Left === "ち") {
-          LinkWod = "T";
-        } else if (t_Left === "つ") {
-          LinkWod = "T";
-        } else if (t_Left === "て") {
-          LinkWod = "T";
-        } else if (t_Left === "と") {
-          LinkWod = "T";
-        } else if (t_Left === "だ") {
-          LinkWod = "T";
-        } else if (t_Left === "ぢ") {
-          LinkWod = "T";
-        } else if (t_Left === "づ") {
-          LinkWod = "T";
-        } else if (t_Left === "で") {
-          LinkWod = "T";
-        } else if (t_Left === "ど") {
-          LinkWod = "T";
-        } else if (t_Left === "な") {
-          LinkWod = "N";
-        } else if (t_Left === "に") {
-          LinkWod = "N";
-        } else if (t_Left === "ぬ") {
-          LinkWod = "N";
-        } else if (t_Left === "ね") {
-          LinkWod = "N";
-        } else if (t_Left === "の") {
-          LinkWod = "N";
-        } else if (t_Left === "は") {
-          LinkWod = "H";
-        } else if (t_Left === "ひ") {
-          LinkWod = "H";
-        } else if (t_Left === "ふ") {
-          LinkWod = "H";
-        } else if (t_Left === "へ") {
-          LinkWod = "H";
-        } else if (t_Left === "ほ") {
-          LinkWod = "H";
-        } else if (t_Left === "ば") {
-          LinkWod = "H";
-        } else if (t_Left === "び") {
-          LinkWod = "H";
-        } else if (t_Left === "ぶ") {
-          LinkWod = "H";
-        } else if (t_Left === "べ") {
-          LinkWod = "H";
-        } else if (t_Left === "ぼ") {
-          LinkWod = "H";
-        } else if (t_Left === "ま") {
-          LinkWod = "M";
-        } else if (t_Left === "み") {
-          LinkWod = "M";
-        } else if (t_Left === "む") {
-          LinkWod = "M";
-        } else if (t_Left === "め") {
-          LinkWod = "M";
-        } else if (t_Left === "も") {
-          LinkWod = "M";
-        } else if (t_Left === "や") {
-          LinkWod = "Y";
-        } else if (t_Left === "ゆ") {
-          LinkWod = "Y";
-        } else if (t_Left === "よ") {
-          LinkWod = "Y";
-        } else if (t_Left === "ら") {
-          LinkWod = "R";
-        } else if (t_Left === "り") {
-          LinkWod = "R";
-        } else if (t_Left === "る") {
-          LinkWod = "R";
-        } else if (t_Left === "れ") {
-          LinkWod = "R";
-        } else if (t_Left === "ろ") {
-          LinkWod = "R";
-        } else if (t_Left === "わ") {
-          LinkWod = "W";
-        } else if (t_Left === "を") {
-          LinkWod = "W";
-        } else if (t_Left === "ん") {
-          LinkWod = "W";
+        const LinkWodMap = {
+          "あ": "A",
+          "い": "A",
+          "う": "A",
+          "え": "A",
+          "お": "A",
+          "か": "K",
+          "き": "K",
+          "く": "K",
+          "け": "K",
+          "こ": "K",
+          "が": "K",
+          "ぎ": "K",
+          "ぐ": "K",
+          "げ": "K",
+          "ご": "K",
+          "さ": "S",
+          "し": "S",
+          "す": "S",
+          "せ": "S",
+          "そ": "S",
+          "ざ": "S",
+          "じ": "S",
+          "ず": "S",
+          "ぜ": "S",
+          "ぞ": "S",
+          "た": "T",
+          "ち": "T",
+          "つ": "T",
+          "て": "T",
+          "と": "T",
+          "だ": "T",
+          "ぢ": "T",
+          "づ": "T",
+          "で": "T",
+          "ど": "T",
+          "な": "N",
+          "に": "N",
+          "ぬ": "N",
+          "ね": "N",
+          "の": "N",
+          "は": "H",
+          "ひ": "H",
+          "ふ": "H",
+          "へ": "H",
+          "ほ": "H",
+          "ば": "H",
+          "び": "H",
+          "ぶ": "H",
+          "べ": "H",
+          "ぼ": "H",
+          "ぱ": "H",
+          "ぴ": "H",
+          "ぷ": "H",
+          "ぺ": "H",
+          "ぽ": "H",
+          "ま": "M",
+          "み": "M",
+          "む": "M",
+          "め": "M",
+          "も": "M",
+          "や": "Y",
+          "ゆ": "Y",
+          "よ": "Y",
+          "ら": "R",
+          "り": "R",
+          "る": "R",
+          "れ": "R",
+          "ろ": "R",
+          "わ": "W",
+          "を": "W",
+          "ん": "W"
         }
+        LinkWod = LinkWodMap[t_Left]
         $("#list-contents-" + LinkWod).append(
           '<li class="list-wrap"><a href="javascript:void(0)"onclick="open_result(\'' +
             sortAry[ii].no +
