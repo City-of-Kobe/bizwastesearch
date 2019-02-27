@@ -6,7 +6,7 @@
 
 本サイトの公開の目的、公開したことによる効果などは、以下にまとめています。
 
-[自治体のごみ分別検索サイトをつくったぞ、でもってオープンソースも公開したぞ（ただし事業系ごみ） - Qiita](https://qiita.com/S_Kosaka/items/8aeae761695757cdb78f)
+[自治体のごみ分別検索サイトをつくったぞ、でもってオープンソースも公開したぞ（ただし事業系ごみ） - Qiita](https://github.com/City-of-Kobe/bizwastesearch)
 
 ## セットアップ方法
 
@@ -106,9 +106,9 @@ Web サーバーにて公開するファイル群です。
   <https://github.com/maechabin/bootstrap-material-button-color>
 - Intro.js（v2.9.3 | intro.min.js,intro.min.css）  
   <https://introjs.com/docs/>
-- jQuery（v3.3.1 | jquery.min.js）  
+- jQuery（v1.9.1 | jquery.min.js）  
   <https://jquery.com/>
-- jQeryUI（v1.12.1 | jquery-ui.min.css,jquery-ui-min.js）  
+- jQeryUI（v1.11.4 | jquery-ui.min.css,jquery-ui-min.js）  
   <https://jqueryui.com/>
 
 ## ローカライズについて
