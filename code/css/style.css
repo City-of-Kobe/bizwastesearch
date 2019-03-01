@@ -751,8 +751,9 @@ body {
   margin-top: 10px;
 }
 .snsIcon {
-  width: 65px;
-  margin: 10px;
+  width: 18%;
+  max-width: 65px;
+  margin: 2%;
 }
 .share_modal_url_title {
   width: 93%;
