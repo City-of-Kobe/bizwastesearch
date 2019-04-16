@@ -911,7 +911,7 @@ $(window).on("load", function() {
     var sanpaistr =
       '現在契約中の一般廃棄物収集運搬許可業者（<a href=\'javascript:void(0)\' onclick=\'turnPage("http://www.city.kobe.lg.jp/business/regulation/environment/enterprise/gyousy_l.html","event","information_info(No.' +
       no +
-      ',kyokagyoshalist)")\'>一覧ページ</a>） または、兵庫県産業廃棄物協会（<a href=\'javascript:void(0)\' onclick=\'turnPage("tel:0783817464","event","information_info(No.' +
+      ',kyokagyoshalist)")\'>一覧ページ</a>） または、兵庫県産業資源循環協会（<a href=\'javascript:void(0)\' onclick=\'turnPage("tel:0783817464","event","information_info(No.' +
       no +
       ",sanpaikyokai)\")'>078-381-7464</a>）へご相談ください";
     var recyclingstr =
