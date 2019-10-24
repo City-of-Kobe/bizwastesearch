@@ -34,6 +34,7 @@ $(function() {
   var m = now.getMonth() + 1;
   var d = now.getDate();
   var aug = aug_hantei(); //8月判定用
+  var jug = jugoya_hantei(); //十五夜(9月)判定用
   //navbarデザイン
   //4/1〜4/7  桜
   if (m === 4 && d < 8) {
@@ -57,8 +58,8 @@ $(function() {
   else if (aug === true) {
     $(".navbar-brand").addClass("navbarimg8");
   }
-  //9/9～15  月見
-  else if (m === 9 && d > 8 && d < 16) {
+  //9月  十五夜
+  else if (jug === true) {
     $(".navbar-brand").addClass("navbarimg9");
   }
   //10/25～31  ハロウィン
@@ -219,8 +220,8 @@ $(function() {
         '<a href="#"><img src="img/img-menubut6_8.png" alt="業種でさがす" class="menuimg-side fadeIn animated"></a>'
       );
     }
-    //9/9～15  月見
-    else if (m === 9 && d > 8 && d < 16) {
+    ///9月  十五夜
+    else if (jug === true) {
       $("#menubut1").append(
         '<a href="#"><img src="img/img-menubut1_9.png" alt="キーワードでさがす" class="menuimg fadeIn animated"></a>'
       );
@@ -619,7 +620,7 @@ $(function() {
     window.location.href = mailto;
   });
   $("#inquiry_tel").click(function(e) {
-    var tel = "tel:0783226432";
+    var tel = "tel:0785956184";
     if (url === "list.html") {
       actionLog("event", "list_tel");
     } else if ("result.html") {
@@ -951,14 +952,13 @@ $(window).on("load", function() {
               no +
               ')">排出量を制限している理由</a></div></li>'
           );
-        }
-        else{
+        } else {
           $("#info-list").append(
-          '<li class="list-group-item" href="#"><div class="text-danger h4"><span class="glyphicon glyphicon-exclamation-sign" /> 排出できる量に制限があります</div><div class="h5">排出できるのは、排出元一箇所・1日につき、総量が70Lの袋で3袋分までです。<br />それ以上を処分する場合、もしくは継続的に処分する場合は産業廃棄物として処分してください。<br />産業廃棄物に関するお問い合わせは、' +
-            sanpaistr +
-            '</div><div class="h5"><a href="javascript:void(0)"onclick="modal_exception(' +
-            no +
-            ')">排出量を制限している理由</a></div></li>'
+            '<li class="list-group-item" href="#"><div class="text-danger h4"><span class="glyphicon glyphicon-exclamation-sign" /> 排出できる量に制限があります</div><div class="h5">排出できるのは、排出元一箇所・1日につき、総量が70Lの袋で3袋分までです。<br />それ以上を処分する場合、もしくは継続的に処分する場合は産業廃棄物として処分してください。<br />産業廃棄物に関するお問い合わせは、' +
+              sanpaistr +
+              '</div><div class="h5"><a href="javascript:void(0)"onclick="modal_exception(' +
+              no +
+              ')">排出量を制限している理由</a></div></li>'
           );
         }
       } else if (limit === 2) {
@@ -1317,83 +1317,83 @@ $(window).on("load", function() {
         sortAry[ii] = sortAry[ii][1];
       }
       var t_Left;
-      var LinkWod;      
+      var LinkWod;
       for (ii = 0; ii < n; ii++) {
         t_Left = sortAry[ii].keyword.slice(0, 1);
         const LinkWodMap = {
-          "あ": "A",
-          "い": "A",
-          "う": "A",
-          "え": "A",
-          "お": "A",
-          "か": "K",
-          "き": "K",
-          "く": "K",
-          "け": "K",
-          "こ": "K",
-          "が": "K",
-          "ぎ": "K",
-          "ぐ": "K",
-          "げ": "K",
-          "ご": "K",
-          "さ": "S",
-          "し": "S",
-          "す": "S",
-          "せ": "S",
-          "そ": "S",
-          "ざ": "S",
-          "じ": "S",
-          "ず": "S",
-          "ぜ": "S",
-          "ぞ": "S",
-          "た": "T",
-          "ち": "T",
-          "つ": "T",
-          "て": "T",
-          "と": "T",
-          "だ": "T",
-          "ぢ": "T",
-          "づ": "T",
-          "で": "T",
-          "ど": "T",
-          "な": "N",
-          "に": "N",
-          "ぬ": "N",
-          "ね": "N",
-          "の": "N",
-          "は": "H",
-          "ひ": "H",
-          "ふ": "H",
-          "へ": "H",
-          "ほ": "H",
-          "ば": "H",
-          "び": "H",
-          "ぶ": "H",
-          "べ": "H",
-          "ぼ": "H",
-          "ぱ": "H",
-          "ぴ": "H",
-          "ぷ": "H",
-          "ぺ": "H",
-          "ぽ": "H",
-          "ま": "M",
-          "み": "M",
-          "む": "M",
-          "め": "M",
-          "も": "M",
-          "や": "Y",
-          "ゆ": "Y",
-          "よ": "Y",
-          "ら": "R",
-          "り": "R",
-          "る": "R",
-          "れ": "R",
-          "ろ": "R",
-          "わ": "W",
-          "を": "W",
-          "ん": "W"
-        }
-        LinkWod = LinkWodMap[t_Left]
+          あ: "A",
+          い: "A",
+          う: "A",
+          え: "A",
+          お: "A",
+          か: "K",
+          き: "K",
+          く: "K",
+          け: "K",
+          こ: "K",
+          が: "K",
+          ぎ: "K",
+          ぐ: "K",
+          げ: "K",
+          ご: "K",
+          さ: "S",
+          し: "S",
+          す: "S",
+          せ: "S",
+          そ: "S",
+          ざ: "S",
+          じ: "S",
+          ず: "S",
+          ぜ: "S",
+          ぞ: "S",
+          た: "T",
+          ち: "T",
+          つ: "T",
+          て: "T",
+          と: "T",
+          だ: "T",
+          ぢ: "T",
+          づ: "T",
+          で: "T",
+          ど: "T",
+          な: "N",
+          に: "N",
+          ぬ: "N",
+          ね: "N",
+          の: "N",
+          は: "H",
+          ひ: "H",
+          ふ: "H",
+          へ: "H",
+          ほ: "H",
+          ば: "H",
+          び: "H",
+          ぶ: "H",
+          べ: "H",
+          ぼ: "H",
+          ぱ: "H",
+          ぴ: "H",
+          ぷ: "H",
+          ぺ: "H",
+          ぽ: "H",
+          ま: "M",
+          み: "M",
+          む: "M",
+          め: "M",
+          も: "M",
+          や: "Y",
+          ゆ: "Y",
+          よ: "Y",
+          ら: "R",
+          り: "R",
+          る: "R",
+          れ: "R",
+          ろ: "R",
+          わ: "W",
+          を: "W",
+          ん: "W"
+        };
+        LinkWod = LinkWodMap[t_Left];
         $("#list-contents-" + LinkWod).append(
           '<li class="list-wrap"><a href="javascript:void(0)"onclick="open_result(\'' +
             sortAry[ii].no +
@@ -2256,6 +2256,140 @@ function aug_hantei() {
   }
   return aug_bl;
 }
+//現在が十五夜までの一週間かどうかの判定
+function jugoya_hantei() {
+  var today = new Date();
+  var y = today.getFullYear();
+  var m = today.getMonth() + 1;
+  var d = today.getDate();
+  //2019.9.7～13
+  if (y === 2019) {
+    if (m === 9 && d > 6 && d < 14) {
+      jugoya_hantei = true;
+    } else {
+      jugoya_hantei = false;
+    }
+  }
+  //2020.9.25～10.1
+  else if (y === 2020) {
+    if (m === 9) {
+      if (d > 24) {
+        jugoya_hantei = true;
+      } else {
+        jugoya_hantei = false;
+      }
+    } else if (m === 10) {
+      if (d === 1) {
+        jugoya_hantei = true;
+      } else {
+        jugoya_hantei = false;
+      }
+    } else {
+      jugoya_hantei = false;
+    }
+  }
+  //2021.9.15～21
+  else if (y === 2021) {
+    if (m === 9 && d > 14 && d < 22) {
+      jugoya_hantei = true;
+    } else {
+      jugoya_hantei = false;
+    }
+  }
+  //2022.9.4～10
+  else if (y === 2022) {
+    if (m === 9 && d > 3 && d < 11) {
+      jugoya_hantei = true;
+    } else {
+      jugoya_hantei = false;
+    }
+  }
+  //2023.9.23～29
+  else if (y === 2023) {
+    if (m === 9 && d > 22 && d < 30) {
+      jugoya_hantei = true;
+    } else {
+      jugoya_hantei = false;
+    }
+  }
+  //2024.9.11～17
+  else if (y === 2024) {
+    if (m === 9 && d > 10 && d < 18) {
+      jugoya_hantei = true;
+    } else {
+      jugoya_hantei = false;
+    }
+  }
+  //2025.9.30～10.6
+  else if (y === 2025) {
+    if (m === 9) {
+      if (d > 29) {
+        jugoya_hantei = true;
+      } else {
+        jugoya_hantei = false;
+      }
+    } else if (m === 10) {
+      if (d < 7) {
+        jugoya_hantei = true;
+      } else {
+        jugoya_hantei = false;
+      }
+    } else {
+      jugoya_hantei = false;
+    }
+  }
+  //2026.9.19～25
+  else if (y === 2026) {
+    if (m === 9 && d > 18 && d < 26) {
+      jugoya_hantei = true;
+    } else {
+      jugoya_hantei = false;
+    }
+  }
+  //2027.9.9～15
+  else if (y === 2027) {
+    if (m === 9 && d > 8 && d < 16) {
+      jugoya_hantei = true;
+    } else {
+      jugoya_hantei = false;
+    }
+  }
+  //2028.9.27～10.3
+  else if (y === 2028) {
+    if (m === 9) {
+      if (d > 26) {
+        jugoya_hantei = true;
+      } else {
+        jugoya_hantei = false;
+      }
+    } else if (m === 10) {
+      if (d < 4) {
+        jugoya_hantei = true;
+      } else {
+        jugoya_hantei = false;
+      }
+    } else {
+      jugoya_hantei = false;
+    }
+  }
+  //2029.9.16～22
+  else if (y === 2029) {
+    if (m === 9 && d > 15 && d < 23) {
+      jugoya_hantei = true;
+    } else {
+      jugoya_hantei = false;
+    }
+  }
+  //2030.9.6～12
+  else if (y === 2030) {
+    if (m === 9 && d > 5 && d < 13) {
+      jugoya_hantei = true;
+    } else {
+      jugoya_hantei = false;
+    }
+  }
+  return jugoya_hantei;
+}
 //canonicalタグ・「このページを共有」モーダル内のセット
 function HeadAndShare(url, url_Key, no, suf, gyoshu, doctit) {
   var sht; //share title
@@ -2370,8 +2504,7 @@ function setAutoCompleate() {
               if (maxi > 5) {
                 break;
               }
-            }
-            else{           
+            } else {
               if (maxi > 7) {
                 break;
               }
